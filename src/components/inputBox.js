@@ -6,7 +6,7 @@ const InputBox = ({ setValue, inputType }) => {
       <input
         type="text"
         placeholder={inputType}
-        class="px-3 py-3 relative border rounded text-sm w-full border-bordercolor focus:border-appblue"
+        class="px-3 py-3 relative border rounded text-sm w-full border-bordercolor focus:border-appblue mb-5"
         onChange={text => setValue(text)}
       />
     </div>

@@ -6,7 +6,7 @@ const Circle = ({ num, isActive }) => {
       className={`w-[35px] h-[35px] rounded-[50%] flex justify-center bottom-0 text-bold items-center ${
         isActive === true
           ? "bg-appblue text-[color:white] "
-          : " border bg-white border-inputborder"
+          : " border bg-white border-bordercolor"
       }`}
     >
       {num}
@@ -25,7 +25,7 @@ const ProgressLine = ({ isActive }) => {
 const ProgressBar = ({ noOfScreens, onPressButton }) => {
   const [itemState, setItemState] = useState(false);
   return (
-    <div className="flex justify-center items-center flex-row">
+    <div className="flex justify-center items-center flex-row mt-10">
       <Circle num={1} isActive={true} />
       <ProgressLine isActive={true} />
       <Circle num={2} isActive={true} />
