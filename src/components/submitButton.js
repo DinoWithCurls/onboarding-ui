@@ -5,7 +5,7 @@ const SubmitButton = ({ children, onPressAction }) => {
     <button
       onClick={onPressAction}
       type="submit"
-      className="inline-flex items-center px-10 py-2 bg-appblue rounded-md font-medium text-[color:white] "
+      className="inline-flex items-center w-full justify-center py-3 bg-appblue rounded-md font-medium text-[color:white] "
     >
       {children}
     </button>

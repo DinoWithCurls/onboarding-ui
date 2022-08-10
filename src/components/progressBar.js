@@ -6,7 +6,7 @@ const Circle = ({ num, isActive }) => {
       className={`w-[35px] h-[35px] rounded-[50%] flex justify-center bottom-0 text-bold items-center ${
         isActive === true
           ? "bg-appblue text-[color:white] "
-          : " border-2 bg-white border-gray-100"
+          : " border bg-white border-inputborder"
       }`}
     >
       {num}

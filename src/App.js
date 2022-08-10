@@ -1,15 +1,14 @@
 import React from "react";
-import ProgressBar from "./components/progressBar";
-import SubmitButton from "./components/submitButton";
+import ScreenUno from "./screens/screenUno";
+import Header from "./components/header";
+import BlockHeader from "./components/blockHeader";
 function App() {
   return (
-    <div className="bg-background flex items-center justify-center">
-      <div className="bg-white flex flex-col w-4/5 ">
-        <h1 className="text-3xl font-bold">Hello world!</h1>
-        <ProgressBar noOfScreens={2} />
-        <div className="w-1/3">
-          <SubmitButton>Enter</SubmitButton>
-        </div>
+    <div className="bg-background flex items-center h-screen w-screen justify-center">
+      <div className="h-4/5 w-4/5 bg-[#fff] z-20 shadow-md">
+        <Header />
+        <div className="mt-20"><BlockHeader /></div>
+        <ScreenUno />
       </div>
     </div>
   );
