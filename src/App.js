@@ -1,4 +1,3 @@
-//Fix the progress bar to look like required.
 //Try to add animations so that it looks better.
 //Deploy it on Netlify
 
