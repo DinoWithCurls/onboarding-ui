@@ -4,10 +4,11 @@ import Header from "./components/header";
 import BlockHeader from "./components/blockHeader";
 import ScreenDos from "./screens/screenDos";
 import ScreenTres from "./screens/screenTres";
+import ScreenCuatro from "./screens/screenCuatro";
 function App() {
   return (
     <div className="bg-background flex items-center h-screen w-screen justify-center">
-      <InsideBlock3 />
+      <InsideBlock4 />
     </div>
   );
 }
@@ -55,6 +56,24 @@ const InsideBlock3 = () => {
         />
       </div>
       <ScreenTres />
+    </div>
+  );
+};
+
+const InsideBlock4 = () => {
+  return (
+    <div className="h-4/5 w-4/5 bg-[#fff] z-20 shadow-md justify-center items-center flex flex-col">
+      <Header />
+      <div className="mt-10 mb-0 w-9/10 flex flex-col flex-wrap items-center">
+        <div className="">
+          <img alt="eden" src={require("./icons/tickmark.jpg")} />
+        </div>
+        <BlockHeader
+          header={"Congratulations, Eren!"}
+          subheader={"You have completed onboarding, you can start using Eden!"}
+        />
+      </div>
+      <ScreenCuatro />
     </div>
   );
 };
