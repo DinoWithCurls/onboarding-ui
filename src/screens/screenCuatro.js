@@ -1,15 +1,25 @@
 import React from "react";
+import { SubmitButton, BlockHeader } from "../components";
 
-import SubmitButton from "../components/submitButton";
-
-const ScreenCuatro = ({returnValue}) => {
+const AcknowledgementTab = ({ func, displayName }) => {
   return (
-    <div className="h-1/2 w-4/5 flex flex-col items-center justify-center top-0">
-      <div className="w-1/3">
-        <SubmitButton onPressAction={returnValue}>Launch Eden</SubmitButton>
+    <div className="w-full h-full">
+      <div className="mt-20 w-9/10 flex flex-col flex-wrap items-center">
+        <div>
+          <img alt="eden" src={require("../icons/tickmark.jpg")} />
+        </div>
+        <BlockHeader
+          header={`Congratulations, ${displayName}!`}
+          subheader={"You have completed onboarding, you can start using Eden!"}
+        />
+      </div>
+      <div className="h-1/2 w-full flex flex-col items-center justify-center">
+        <div className="w-1/4">
+          <SubmitButton onPressAction={func}>Launch Eden</SubmitButton>
+        </div>
       </div>
     </div>
   );
 };
 
-export default ScreenCuatro;
+export default AcknowledgementTab;

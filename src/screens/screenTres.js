@@ -1,14 +1,14 @@
 import React from "react";
-import SubmitButton from "../components/submitButton";
-import Item from "../components/item";
+import { BlockHeader, Item, SubmitButton } from "../components";
 import groups from "../utils/data.json";
-const ScreenTres = ({ getToNextPage, setUser }) => {
+
+const UserTypeInput = ({ getToNextPage, setUser }) => {
   const handleChange = (val) => {
     setUser(val);
   };
   return (
-    <div className="h-1/2 w-4/5 flex flex-row items-center justify-center top-0">
-      <div className="w-1/3">
+    <div className="h-full w-full flex flex-row items-center justify-center top-0">
+      <div className="w-1/4">
         <div className="flex flex-row w-full justify-between mb-2">
           {groups.map((groupType) => {
             return (
@@ -28,4 +28,20 @@ const ScreenTres = ({ getToNextPage, setUser }) => {
   );
 };
 
-export default ScreenTres;
+const UsertypeTab = ({ func, setUserType }) => {
+  return (
+    <div className="w-full h-full">
+      <div className="mt-20 w-9/10">
+        <BlockHeader
+          header={"How are you planning to use Eden?"}
+          subheader={"We'll streamline your setup experience accordingly."}
+        />
+      </div>
+      <div className="h-1/2 w-9/10">
+        <UserTypeInput getToNextPage={func} setUser={setUserType} />
+      </div>
+    </div>
+  );
+};
+
+export default UsertypeTab;
