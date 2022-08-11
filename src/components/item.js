@@ -5,7 +5,7 @@ import { UserGroupIcon, UserIcon } from "@heroicons/react/solid";
 const Item = ({ prop, onSelect, val }) => {
   return (
     <button
-      className="border-2 w-5/12 h-full rounded-md break-normal p-4 border-gray text-left focus:border-appblue focus:text-appblue"
+      className="border-2 w-5/12 h-full rounded-md break-normal p-4 border-bordercolor text-left focus:border-appblue focus:text-appblue"
       onClick={onSelect(prop.id)}
     >
       <div className="mt-2 mb-2">
