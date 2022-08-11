@@ -7,7 +7,7 @@ const InputBox = ({ setValue, placeholder }) => {
         type="text"
         placeholder={placeholder}
         class="px-3 py-3 relative border rounded text-sm w-full border-bordercolor focus:border-appblue mb-5"
-        onChange={(text) => setValue(text)}
+        onChange={event => setValue(event.target.value)}
       />
     </div>
   );
@@ -24,7 +24,7 @@ const EmailInputBox = ({ setValue, placeholder }) => {
         id="website-admin"
         class="rounded-none bg-white border text-gray-900 focus:border-appblue block flex-1 min-w-0 w-full text-sm border-bordercolor p-2.5 mb-5"
         placeholder={placeholder}
-        onChange={(text) => setValue(text)}
+        onChange={event => setValue('www.eden.com/'+event.target.value)}
       />
     </div>
   );

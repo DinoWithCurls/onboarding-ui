@@ -2,11 +2,11 @@ import React from "react";
 
 import { UserGroupIcon, UserIcon } from "@heroicons/react/solid";
 
-const Item = ({ prop, onSelect, val }) => {
+const Item = ({ prop, onSelect }) => {
   return (
     <button
       className="border-2 w-5/12 h-full rounded-md break-normal p-4 border-bordercolor text-left focus:border-appblue focus:text-appblue"
-      onClick={onSelect(prop.id)}
+      onClick={() => onSelect(prop.title)}
     >
       <div className="mt-2 mb-2">
         {prop.id === 1 ? (
@@ -24,5 +24,3 @@ const Item = ({ prop, onSelect, val }) => {
 };
 
 export default Item;
-
-//text-appblue
